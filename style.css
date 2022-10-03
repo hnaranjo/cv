@@ -1,0 +1,128 @@
+:root {
+    --gray-color: rgba(102, 101, 101, 0.863);
+    --bg-body: rgb(77, 121, 71);
+    --orange-color: rgba(210, 105, 30, 0.774);
+    --black-color: hsla(0, 0%, 0%, 0.12);
+
+    --font-one: 'Kanit', sans-serif;
+    --font-two: 'Montserrat', sans-serif;    
+
+    --fs-01: 18px;
+    --fs-02: 14px;
+    --fs-03: 12px;
+
+    --shadow-1: 0 12px 20px 0 rgba(46, 40, 40, 0.555);
+    --shadow-2: 0 2px 10px 0 rgba(10, 10, 9, 0.39);
+    --shadow-3: 0 5px 5px 0 rgba(59, 54, 54, 0.425);
+
+}
+
+body, html {
+    height: 100%;
+    background: var(--bg-body);
+}
+
+.wrapper {
+    background-image: url("./assets/img/background01.jpg");
+    background-repeat: repeat;
+    padding: 40px 40px 40px 40px;
+    height: 100%;
+}
+
+.cab-section {
+    display: flex;
+    background: var(--bg-body);
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-3)
+}
+
+.img-cv {
+    width: auto;
+}
+
+.img-cv img {
+    margin: -10px 20px;
+    width: 160px;
+    border-radius: 20px;
+}
+
+.name-section {
+    font-family: var(--font-one);
+    color: var(--gray-color);
+    font-size: var(--fs-01);
+    color: white;
+    width: 100%;
+}
+
+.prof-section {
+    font-family: var(--font-two);
+    font-size: var(--fs-02);
+    color: var(--orange-color);
+}
+.data-section {
+    width: 90%;
+    display: flex;
+    margin-top: 20px;
+    background: whitesmoke;    
+    border-radius: 20px;
+    box-shadow: var(--shadow-3);
+    height: 85%;
+}
+
+.info-col1 {
+    width: 30%;
+}
+
+.info-col2 {
+    width: 65%;
+}
+
+.card-info {
+    display: flex;
+    border: 0.5px solid var(--orange-color);
+    background: whitesmoke;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.details {
+    display: flex;
+    padding: 1em;
+}
+
+.details p {
+    font-family: var(--font-two);
+    font-size: 12px;
+}
+
+.details-title span {
+    display: flex;
+    color: var(--orange-color);
+    font-family: var(--font-one);
+    font-size: var(--fs-02);
+    border-radius: 5px;
+}
+
+.info-details {
+    display: flex;
+    margin: 20px;
+}
+
+
+
+.divider {
+    height: 1px;
+    background: var(--bg, var(--black-color));
+    margin-block: var(--mb, 8px);
+}
+
+.card_divider {
+    --bg: var(var(--black-color);
+    --mb: 25px;
+    )    
+}
