@@ -1,5 +1,6 @@
 :root {
     --gray-color: rgba(102, 101, 101, 0.863);
+    --spacegray-color: rgba(211, 208, 208, 0.932);
     --bg-body: #283618;
     --orange-color: #BC6C25;
     --orangeWhite-color: #dda15e;
@@ -15,6 +16,8 @@
     --fs-02: 14px;
     --fs-03: 12px;
 
+    --fw-01: 500;
+
     --shadow-1: 0 12px 20px 0 rgba(46, 40, 40, 0.555);
     --shadow-2: 0 2px 10px 0 rgba(10, 10, 9, 0.39);
     --shadow-3: 0 5px 5px 0 rgba(59, 54, 54, 0.425);
@@ -23,11 +26,12 @@
 
 body, html {
     background: var(--bg-body);
+    
 }
 
 * {
-  padding: 00px;
-  margin: 10px;  
+  padding: 0px;
+  margin: 2px;  
 }
 
 .wrapper {
@@ -40,10 +44,10 @@ body, html {
 
 .cab-section {
     display: flex;
+    flex-direction: row;
     background: var(--bg-body);
-    justify-content: center;
     position: relative;
-    width: 100%;
+    width: 100%; 
     height: auto;
     border-radius: 20px;
     box-shadow: var(--shadow-3)
@@ -60,10 +64,11 @@ body, html {
 }
 
 .name-section {
+    display: grid;
+    padding-top: 1rem;
     font-family: var(--font-one);
-    color: var(--gray-color);
+    color: var(--crem-color);
     font-size: var(--fs-01);
-    color: white;
     width: 100%;
 }
 
@@ -77,7 +82,7 @@ body, html {
     width: 100%;
     display: flex;
     margin-top: 20px;
-    background: var(--crem-color);    
+    background: var(--spacegray-color);
     border-radius: 20px;
     box-shadow: var(--shadow-3);
     height: 85%;
@@ -93,7 +98,7 @@ body, html {
 
 .card-info {
     display: flex;
-    border: 0.5px solid var(--orange-color);
+    flex-direction: column;
     background: var(--crem-color);
     margin: 20px;
     padding: 20px;
@@ -101,18 +106,32 @@ body, html {
     box-shadow: var(--shadow-1);
 }
 
-.details {
+.details p {
     display: flex;
-    padding: 1em;
+    padding: 0;
+    font-family: var(--font-two);
 }
 
-.details {
+.details li {
+    display: flex;
+    list-style: none;
     font-family: var(--font-two);
-    font-size: 12px;
+}
+
+.details-items {
+    width: 50%;
+}
+
+.details-stars {
+    color: var(--orange-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .details-title span {
-    display: flex;
+    display: inline;
+    width: 100%;
     color: var(--orange-color);
     font-family: var(--font-one);
     font-size: var(--fs-02);
@@ -120,11 +139,11 @@ body, html {
 }
 
 .info-details p {
+    width: auto;
     display: flex;
+    flex-direction: column;
     margin: 20px;
 }
-
-
 
 .divider {
     height: 1px;
@@ -137,3 +156,70 @@ body, html {
     --mb: 25px;
     )    
 }
+
+.cab-icon {
+    color: var(--gray-color);
+    font-size: 25px;
+}
+
+.details-icon {
+    color: var(--bg-body);
+    font-size: 25px;
+}
+
+.details-donuts {
+    display: flex;
+    flex-direction: row;
+}
+
+.job-position {
+    font-family: var(--font-one);
+    color: var(--orange-color);
+    font-size: var(--fs-03);
+    font-weight: var(--fw-01);
+}
+
+.details-contact {
+    display: flex;
+    flex-direction: column;
+
+}
+/**
+* Donut Average
+*/
+
+.svg-item {
+    width: 150px;
+    height: 150px;
+    font-size: 14px;
+  }
+  .donut-ring {
+    stroke: #EBEBEB;
+  }
+  
+  .donut-segment {
+    animation: donut-chart-fill 1s reverse ease-in;
+    transform-origin: center;
+    stroke: var(--olive-color);
+  }
+  
+  .donut-text {
+    font-family: var(--font-two);
+    fill: var(--olive-color);
+    padding-left: 5px;
+  }
+  
+  .donut-label {
+    font-size: 0.28em;
+    font-weight: 700;
+    line-height: 1;
+    fill: var(--olive-color);
+    transform: translateY(0.25em);    
+  }
+  
+  .donut-percent {
+    font-size: 0.5em;
+    fill: var(--orange-color);
+    line-height: 1;
+    transform: translateY(0.5em);
+  }
